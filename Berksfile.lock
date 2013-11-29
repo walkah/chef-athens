@@ -1,0 +1,27 @@
+{
+  "sources": {
+    "athens": {
+      "path": "."
+    },
+    "minecraft": {
+      "locked_version": "0.1.0",
+      "git": "https://github.com/walkah/chef-minecraft.git",
+      "ref": "6c7b2db4d4c22e39ef1eb74348d4c276bbe38a4e"
+    },
+    "apt": {
+      "locked_version": "2.3.0"
+    },
+    "java": {
+      "locked_version": "1.15.4"
+    },
+    "windows": {
+      "locked_version": "1.11.0"
+    },
+    "chef_handler": {
+      "locked_version": "1.1.4"
+    },
+    "aws": {
+      "locked_version": "1.0.0"
+    }
+  }
+}
