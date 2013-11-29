@@ -1,6 +1,6 @@
-##
-# Cookbook Name:: athens
-# Recipe:: default
+#
+# Cookbook Name:: workstation
+# Recipe:: plato
 #
 # Copyright (C) 2013 James Walker
 # 
@@ -16,3 +16,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
+include_recipe "apt"
+include_recipe "minecraft"
