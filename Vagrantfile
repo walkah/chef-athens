@@ -16,9 +16,11 @@ Vagrant.configure("2") do |config|
   config.vm.provision :chef_solo do |chef|
     chef.json = { }
 
+    chef.data_bags_path = "data_bags"
+
     chef.run_list = [
-      "recipe[apt]",
-      "recipe[athens::default]"
+      "recipe[chef-solo-search]",
+      "recipe[athens::socrates]"
     ]
   end
 end

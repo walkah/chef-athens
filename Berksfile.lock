@@ -3,13 +3,30 @@
     "athens": {
       "path": "."
     },
+    "chef-solo-search": {
+      "locked_version": "0.5.1"
+    },
     "minecraft": {
       "locked_version": "0.1.0",
       "git": "https://github.com/walkah/chef-minecraft.git",
       "ref": "6c7b2db4d4c22e39ef1eb74348d4c276bbe38a4e"
     },
+    "znc": {
+      "locked_version": "0.0.1",
+      "git": "https://github.com/walkah/chef-znc.git",
+      "ref": "1b517184360313f7498ebd958b063839ea21d79c"
+    },
     "apt": {
       "locked_version": "2.3.0"
+    },
+    "chef-client": {
+      "locked_version": "3.1.0"
+    },
+    "cron": {
+      "locked_version": "1.2.8"
+    },
+    "logrotate": {
+      "locked_version": "1.4.0"
     },
     "java": {
       "locked_version": "1.15.4"
@@ -22,6 +39,9 @@
     },
     "aws": {
       "locked_version": "1.0.0"
+    },
+    "build-essential": {
+      "locked_version": "1.4.2"
     }
   }
 }
