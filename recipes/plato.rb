@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: workstation
+# Cookbook Name:: athens
 # Recipe:: plato
 #
 # Copyright (C) 2013 James Walker
