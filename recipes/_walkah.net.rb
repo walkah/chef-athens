@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: athens
-# Recipe:: socrates
+# Recipe:: _walkah.net
 #
 # Copyright (C) 2013 James Walker
 # 
@@ -17,10 +17,17 @@
 # limitations under the License.
 #
 
-include_recipe "athens::base"
+include_recipe "nginx"
 
-include_recipe "apt"
-include_recipe "znc::default"
-include_recipe "znc::module_colloquy"
+directory node['walkah.net']['dir'] do
+  owner node['users'][0]
+  mode "0755"
+  recursive true
+end
 
-include_recipe "athens::_walkah.net"
+template "#{node['nginx']['dir']}/sites-available/walkah.net.conf" do
+  source "walkah.net.conf.erb"
+  mode "0644"
+end
+
+nginx_site "walkah.net.conf"

@@ -1,0 +1,35 @@
+server {
+  listen 80 default;
+
+  keepalive_timeout 10;
+  root <%= node['walkah.net']['dir'] %>;
+
+  error_page 404 /404.html;
+
+  location /james-walker {
+    rewrite ^(.*)$ /about.html permanent;
+  }
+
+  location /node/feed {
+    rewrite ^(.*)$ /atom.xml permanent;
+  }
+
+  location /rss.xml {
+    rewrite ^(.*)$ /atom.xml permanent;
+  }
+
+  location /topics/drupal/feed {
+    rewrite ^(.*)$ /tag/drupal/atom.xml permanent;
+  }
+
+  location /tag/openid/feed {
+    rewrite ^(.*)$ /tag/openid/atom.xml permanent;
+  }
+
+  location / {
+    if ($http_user_agent !~ "^(FeedBurner|FeedValidator)"){
+      rewrite ^/atom.xml http://feeds.feedburner.com/walkah redirect;
+      rewrite ^/tag/drupal/atom.xml http://feeds.feedburner.com/walkah/drupal redirect;
+    }
+  }
+}
