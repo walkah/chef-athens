@@ -1,6 +1,6 @@
-#
+##
 # Cookbook Name:: athens
-# Attributes:: default
+# Recipe:: base
 #
 # Copyright (C) 2013 James Walker
 # 
@@ -17,13 +17,12 @@
 # limitations under the License.
 #
 
-default['users'] = [ "walkah" ]
 
-default['authorization']['sudo']['groups'] = [ "sysadmin", "admin" ]
-default['authorization']['sudo']['passwordless'] = true
+%w{ zsh vim tmux htop }.each do |pkg|
+  package pkg
+end
 
-default['homesick']['gem_version'] = '~> 0.9.5'
-
-default['znc']['install_method'] = "source"
-default['znc']['version'] = "1.2"
-default['znc']['checksum'] = "d9a2cd2a484ff23e6fc9cbde8dd8a43efbcd8d288afca7b1268914ca0d18701d"
+include_recipe "sudo"
+include_recipe "users::sysadmins"
+include_recipe "homesick::data_bag"
+include_recipe "oh-my-zsh"

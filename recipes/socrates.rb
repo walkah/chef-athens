@@ -17,6 +17,8 @@
 # limitations under the License.
 #
 
+include_recipe "athens::base"
+
 include_recipe "apt"
 include_recipe "znc::default"
 include_recipe "znc::module_colloquy"

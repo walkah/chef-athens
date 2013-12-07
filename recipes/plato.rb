@@ -17,5 +17,7 @@
 # limitations under the License.
 #
 
+include_recipe "athens::base"
+
 include_recipe "apt"
 include_recipe "minecraft"
