@@ -1,86 +1,69 @@
-{
-  "sources": {
-    "athens": {
-      "path": "."
-    },
-    "chef-solo-search": {
-      "locked_version": "0.5.1"
-    },
-    "minecraft": {
-      "locked_version": "0.1.0",
-      "git": "https://github.com/walkah/chef-minecraft.git",
-      "ref": "6c7b2db4d4c22e39ef1eb74348d4c276bbe38a4e"
-    },
-    "znc": {
-      "locked_version": "0.0.1",
-      "git": "https://github.com/walkah/chef-znc.git",
-      "ref": "1b517184360313f7498ebd958b063839ea21d79c"
-    },
-    "apt": {
-      "locked_version": "2.3.0"
-    },
-    "chef-client": {
-      "locked_version": "3.1.0"
-    },
-    "cron": {
-      "locked_version": "1.2.8"
-    },
-    "logrotate": {
-      "locked_version": "1.4.0"
-    },
-    "homesick": {
-      "locked_version": "0.4.0"
-    },
-    "git": {
-      "locked_version": "2.7.0"
-    },
-    "dmg": {
-      "locked_version": "2.0.6"
-    },
-    "build-essential": {
-      "locked_version": "1.4.2"
-    },
-    "yum": {
-      "locked_version": "2.4.0"
-    },
-    "windows": {
-      "locked_version": "1.11.0"
-    },
-    "chef_handler": {
-      "locked_version": "1.1.4"
-    },
-    "runit": {
-      "locked_version": "1.3.0"
-    },
-    "nginx": {
-      "locked_version": "2.0.4"
-    },
-    "bluepill": {
-      "locked_version": "2.3.0"
-    },
-    "rsyslog": {
-      "locked_version": "1.9.0"
-    },
-    "ohai": {
-      "locked_version": "1.1.12"
-    },
-    "oh-my-zsh": {
-      "locked_version": "0.4.3"
-    },
-    "zsh": {
-      "locked_version": "1.0.0"
-    },
-    "users": {
-      "locked_version": "1.6.0"
-    },
-    "sudo": {
-      "locked_version": "2.2.2"
-    },
-    "java": {
-      "locked_version": "1.15.4"
-    },
-    "aws": {
-      "locked_version": "1.0.0"
-    }
-  }
-}
+DEPENDENCIES
+  athens
+    path: .
+    metadata: true
+  chef-solo-search
+  minecraft
+    git: https://github.com/walkah/chef-minecraft.git
+    revision: 6c7b2db4d4c22e39ef1eb74348d4c276bbe38a4e
+    branch: master
+
+GRAPH
+  apt (2.3.10)
+  athens (0.4.1)
+    apt (~> 2.3.0)
+    chef-client (~> 3.1.0)
+    homesick (~> 0.4.0)
+    minecraft (>= 0.0.0)
+    nginx (~> 2.0.4)
+    oh-my-zsh (~> 0.4.3)
+    sudo (~> 2.2.2)
+    users (~> 1.6.0)
+    znc (~> 0.0.1)
+  bluepill (2.3.1)
+    rsyslog (>= 0.0.0)
+  build-essential (1.4.4)
+  chef-client (3.1.2)
+    cron (>= 1.2.0)
+    logrotate (>= 1.2.0)
+  chef-solo-search (0.5.1)
+  chef_handler (1.1.6)
+  cron (1.6.1)
+  dmg (2.2.2)
+  git (2.8.4)
+    build-essential (>= 0.0.0)
+    dmg (>= 0.0.0)
+    runit (>= 1.0.0)
+    windows (>= 0.0.0)
+    yum (< 3.0.0)
+  homesick (0.4.0)
+    git (>= 0.0.0)
+  java (1.29.0)
+  logrotate (1.7.0)
+  minecraft (0.1.0)
+    apt (>= 0.0.0)
+    java (>= 0.0.0)
+  nginx (2.0.8)
+    apt (~> 2.2)
+    bluepill (~> 2.3)
+    build-essential (~> 1.4)
+    ohai (~> 1.1)
+    runit (~> 1.2)
+    yum (< 3.0.0)
+  oh-my-zsh (0.4.3)
+    git (>= 0.0.0)
+    users (>= 0.0.0)
+    zsh (>= 0.0.0)
+  ohai (1.1.12)
+  rsyslog (1.13.0)
+  runit (1.4.6)
+    build-essential (>= 0.0.0)
+    yum (< 3.0.0)
+  sudo (2.2.2)
+  users (1.6.0)
+  windows (1.36.1)
+    chef_handler (>= 0.0.0)
+  yum (2.4.4)
+  znc (0.0.1)
+    build-essential (>= 0.0.0)
+  zsh (1.0.1)
