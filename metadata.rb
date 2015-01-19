@@ -4,7 +4,7 @@ maintainer_email 'walkah@walkah.net'
 license          'Apache 2.0'
 description      'Installs/Configures my various servers'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.4.0'
+version          '0.4.1'
 
 supports "ubuntu"
 
@@ -16,4 +16,4 @@ depends "nginx",        "~> 2.0.4"
 depends "oh-my-zsh",    "~> 0.4.3"
 depends "sudo",         "~> 2.2.2"
 depends "users",        "~> 1.6.0"
-depends "znc"
+depends "znc",          "~> 0.0.1"

@@ -27,9 +27,9 @@ server {
   }
 
   location / {
-    if ($http_user_agent !~ "^(FeedBurner|FeedValidator)"){
-      rewrite ^/atom.xml http://feeds.feedburner.com/walkah redirect;
-      rewrite ^/tag/drupal/atom.xml http://feeds.feedburner.com/walkah/drupal redirect;
+    if ($http_user_agent !~ (FeedValidator|FeedPress)){
+      rewrite ^/atom.xml http://feedpress.me/walkah redirect;
+      rewrite ^/tag/drupal/atom.xml http://feedpress.me/walkah/drupal redirect;
     }
   }
 }
